@@ -4,12 +4,13 @@ import axios from "axios";
 
 import Cards from "./components/Cards.jsx";
 import Nav from "./components/Nav.jsx";
-import About from "./views/About.jsx";
-
-import "./App.css";
 import Detail from "./views/Detail.jsx";
 import ErrorPage from "./views/ErrorPage.jsx";
 import Login from "./views/Login.jsx";
+import Favorites from "./views/Favorites.jsx";
+import About from "./views/About.jsx";
+
+import "./App.css";
 
 
 function App() {
@@ -21,7 +22,8 @@ function App() {
    const EMAIL = "joako@gmail.com";
    const PASSWORD = "123456a";
 
- 
+  
+    
 
    function loginHandler (userData){
       if (userData.password === PASSWORD && userData.email === EMAIL) {
@@ -83,7 +85,7 @@ function App() {
         logout={logoutHandler}
       />
     )}
-
+  
     <Routes>
       <Route path="/" element={<Login login={loginHandler} />} />
       <Route
@@ -91,6 +93,7 @@ function App() {
         element={<Cards characters={characters} onClose={closeHandler} />}
       />
       <Route path="/about" element={<About />} />
+      <Route path="/favorites" element={<Favorites />} />
       <Route path="/detail/:id" element={<Detail />} />
       <Route path="*" element={<ErrorPage />} />
     </Routes>
