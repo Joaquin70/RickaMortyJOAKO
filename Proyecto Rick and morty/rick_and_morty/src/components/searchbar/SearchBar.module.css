@@ -1,0 +1,140 @@
+.searchBar {
+  display: grid;
+  justify-self: center;
+  align-content: center;
+  align-self: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  width: 350px;
+  height: 35px;
+  border-radius: 10px;
+  background-color: rgb(45, 45, 45);
+}
+
+.searchBar input {
+  width: 250px;
+  height: 35px;
+  font-size: 14px;
+  font-family: 'Orbitron';
+  align-self: center;
+  border-radius: 5px;
+  background-color: rgb(245, 245, 245);
+  border: 0;
+  outline: none;
+}
+
+.search {
+  display: grid;
+  width: 40px;
+  height: 40px;
+  align-content: center;
+  background-color: gold;
+  color: aliceblue;
+  margin-left: 10px;
+  border-radius: 50%;
+  border: 0;
+}
+
+.search:hover {
+  scale: 0.9;
+  background-color: rgb(179, 120, 235);
+  box-shadow: 0px 0px 5px violet;
+}
+
+.search img {
+  width: 27px;
+}
+
+
+
+.random {
+  display: grid;
+  width: 40px;
+  height: 40px;
+  align-content: center;
+  background-color: beige;
+  color: aliceblue;
+  margin-right: 10px;
+  border-radius: 50%;
+  border: 0;
+}
+
+.random:hover {
+  scale: 0.9;
+  background-color: rgb(179, 120, 235);
+  box-shadow: 0px 0px 5px violet;
+}
+
+.random img {
+  width: 27px;
+}
+
+@keyframes latido {
+  from {
+    transform: scale(0.7);
+  }
+  to {
+    transform: rotate(1.4);
+  }
+}
+
+.favButton {
+  display: grid;
+}
+
+.favButton button {
+  background-color: rgb(3, 4, 1);
+  border-radius: 50%;
+  width: 40px;
+  height: 35px;
+  border: 0;
+  margin-right: 10px;
+}
+
+.favButton button:hover {
+  scale: 0.9;
+  background-color: greenyellow;
+  box-shadow: 0px 0px 5px greenyellow;
+}
+
+.favButton button img {
+  width: 27px;
+  padding-top: 5px;
+  animation: latido 1s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.rotating {
+  animation: rotate 2s linear infinite;
+  background-color: aquamarine;
+}
+
+.rotating:hover {
+  scale: 0.9;
+  background-color: gray;
+  box-shadow: 0px 0px 5px gray;
+}
+
+@media (max-width: 1280px) {
+  .searchBar input {
+    width: 150px;
+  }
+}
+
+@media (max-width: 768px) {
+  .searchBar {
+    margin-left: 0px;
+  }
+
+  .searchBar input {
+    width: 150px;
+  }
+
+}

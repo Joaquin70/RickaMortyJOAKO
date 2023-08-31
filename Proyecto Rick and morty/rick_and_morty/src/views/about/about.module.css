@@ -1,0 +1,62 @@
+.aboutContainer::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background-color: blue;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 30%;
+  }
+  
+  .aboutContainer {
+    display: grid;
+    grid-template-rows: 1fr 2fr 3fr;
+    justify-self: center;
+    margin-top: 100px;
+    width: 300px;
+    height: 450px;
+    background-color: rgba(45, 45, 45, 0.9);
+    border-radius: 20px;
+    box-shadow: 3px 3px 10px greenyellow, -3px -3px 10px aqua;
+  }
+  
+  .perfil img {
+    margin-top: -35px;
+    width: 130px;
+    border-radius: 50%;
+    border: 3px solid greenyellow;
+  }
+  
+  .aboutContainer h2 {
+    color: blueviolet;
+  }
+  
+  .text {
+    width: 90%;
+    justify-self: center;
+  }
+  
+  .text p {
+    display: grid;
+    color: gray;
+    font-weight: bolder;
+    font-size: 12px;
+  }
+  
+  .logo {
+    width: 30px;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    .aboutContainer {
+      margin-top: 200px;
+    }
+  }

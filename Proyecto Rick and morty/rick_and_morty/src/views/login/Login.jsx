@@ -1,5 +1,6 @@
 import {useState} from "react";
-import {validar} from "../helpers";
+import {validar} from "../../helpers";
+import style from "../login/login.module.css"
 function Login({login}) {
   const [userData, setUserData] = useState({
     email: "",
@@ -45,20 +46,20 @@ function Login({login}) {
   }
 
   return (
-    <div>
+    <div className={style.container}>
       <form onSubmit={submitHandler}>
-        <div>
+        <div className={style.email}>
           <label>USERNAME</label>
           <input
             type="text"
             name="email"
             value={userData.email}
             onChange={inputHandler}
-            placeholder="wubalubadubdub@flarg.com"
+            placeholder="example@gmail.com"
           />
           <span>{errors.email}</span>
         </div>
-        <div>
+        <div className={style.password}>
           <label>PASSWORD</label>
           <input
             name="password"
@@ -68,11 +69,11 @@ function Login({login}) {
             placeholder="Password"
           />
         </div>
-        {errors.password && <span>{errors.password}</span>}
+        {errors.password &&(<h5 className={style.error}>{errors.password} </h5>) }
         {/* {errors.password || errors.email ? null : (
           <button type="submit">SUBMIT</button>
         )} */}
-        <button disabled={diseableHandler()} type="submit">
+        <button disabled={diseableHandler()} type="submit" className={style.submit}>
           SUBMIT
         </button>
       </form>

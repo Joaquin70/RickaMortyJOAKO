@@ -1,0 +1,43 @@
+.selectors {
+    display: grid;
+    position: center;
+    width: 100%;
+    justify-content: center;
+    height: 35px;
+    grid-template-columns: 80px 80px 80px;
+    gap: 20px;
+    background-color: rgb(73, 63, 63);
+  }
+  
+  .selectors select {
+    height: 25px;
+    align-self: center;
+    background-color: grey;
+    font-family: 'Orbitron';
+    font-size: 12px;
+    border-radius: 5px;
+  }
+  
+  .reset {
+    width: 60px;
+    height: 25px;
+    align-self: center;
+    border: 0;
+    background-color: rgb(83, 226, 43);
+    color: aliceblue;
+    border-radius: 5px;
+    justify-self: center;
+  }
+  
+  .cards {
+    display: grid;
+    margin-top: 50px;
+    grid-template-columns: 80px 80px 80px;
+    position: center;
+  }
+  
+  @media (max-width: 768px) {
+    .selectors {
+      margin-top: 150px;
+    }
+  }

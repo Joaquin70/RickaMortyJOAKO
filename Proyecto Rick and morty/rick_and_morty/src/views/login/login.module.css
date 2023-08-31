@@ -1,0 +1,75 @@
+.container {
+    display: grid;
+    justify-self: center;
+    background-image: url(../../assets/formm.jpg);
+    background-position: center;
+  background-repeat: no-repeat;
+    width: 300px;
+    height: 400px;
+    border-radius: 20px;
+    margin-top: 50px;
+    box-shadow: 3px 3px 10px greenyellow, -3px -3px 10px aqua;
+  }
+  
+  .container:hover {
+    box-shadow: 3px 3px 20px greenyellow, -3px -3px 20px aqua;
+  }
+  
+  h2 {
+    color: gold;
+    margin-top: 30px;
+    margin-bottom: 50px;
+  }
+  
+  input {
+    border: 0;
+    outline: none;
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
+  }
+  
+  .email {
+    height: 80px;
+  }
+  
+  .password {
+    height: 80px;
+  }
+  
+  .error {
+    color: gray;
+    font-size: 12px;
+    width: 95%;
+  }
+  
+  .submit {
+    font-size: 12px;
+    font-family: 'Orbitron';
+    border: 0;
+    width: 70px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: rgb(126, 15, 230);
+    color: aliceblue;
+    transition: 200ms;
+    margin-top: 50px;
+  }
+  
+  .submit:hover {
+    scale: 0.9;
+    background-color: rgb(179, 120, 235);
+  }
+  
+  .email {
+    color: rgb(215, 215, 215);
+    margin-top: 5px;
+    font-size: 10px;
+  }
+  
+  .password {
+    color: rgb(215, 215, 215);
+    margin-top: 5px;
+    font-size: 10px;
+  }
+  

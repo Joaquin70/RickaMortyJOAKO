@@ -2,13 +2,13 @@ import {useState, useEffect} from "react";
 import {Route, Routes, useLocation, useNavigate} from "react-router-dom";
 import axios from "axios";
 
-import Cards from "./components/Cards.jsx";
-import Nav from "./components/Nav.jsx";
+import Cards from "./components/cards/Cards.jsx";
+import Nav from "./components/nav/Nav.jsx"
 import Detail from "./views/Detail.jsx";
 import ErrorPage from "./views/ErrorPage.jsx";
-import Login from "./views/Login.jsx";
-import Favorites from "./views/Favorites.jsx";
-import About from "./views/About.jsx";
+import Login from "./views/login/Login.jsx";
+import Favorites from "./views/favorites/Favorites.jsx";
+import About from "./views/about/About.jsx";
 
 import "./App.css";
 
@@ -20,7 +20,7 @@ function App() {
  
    const [access, setAccess] = useState(false);
    const EMAIL = "joako@gmail.com";
-   const PASSWORD = "123456a";
+   const PASSWORD = "123456";
 
   
     
@@ -32,9 +32,9 @@ function App() {
        }
    }
    
-  function logoutHandler() {
-   setAccess(false);
- }
+ // function logoutHandler() {
+   //setAccess(false);
+ //}
 
  useEffect(() => {
    !access && navigate("/");
@@ -59,30 +59,34 @@ function App() {
   
       setCharacters(filteredCharacters);
     }
+  //  function randomHandler() {
+    //  let memoria = [];
   
-    function randomHandler() {
-      let memoria = [];
+      //let randomId = (Math.random() * 826).toFixed();
   
-      let randomId = (Math.random() * 826).toFixed();
+     // randomId = Number(randomId);
   
-      randomId = Number(randomId);
-  
-      if (!memoria.includes(randomId)) {
-        memoria.push(randomId);
-        searchHandler(randomId);
-      } else {
-        alert("Ese personaje ya fue agregado");
-        return;
-      }
+      //if (!memoria.includes(randomId)) {
+       // memoria.push(randomId);
+       // searchHandler(randomId);
+      //} else {
+        //alert("Ese personaje ya fue agregado");
+        //return;
+      //}
+    //}
+    
+    function onLogOut(){
+      setAccess(false)
     }
     return(
     <div className="App">
 
     {location.pathname !== "/" && (
       <Nav
+      onLogOut={onLogOut}
         onSearch={searchHandler}
-        randomize={randomHandler}
-        logout={logoutHandler}
+       // randomize={randomHandler}
+        //logout={logoutHandler}
       />
     )}
   
