@@ -1,0 +1,40 @@
+.NotFound {
+    display: grid;
+    justify-content: center;
+    align-content: space-around;
+  }
+  .NotFound h1 {
+    color: aliceblue;
+    margin-top: 100px;
+    font-size: 120px;
+    font-family: "Montserrat";
+  }
+  
+  .NotFound p {
+    margin-top: -90px;
+    font-size: 30px;
+    font-family: "Montserrat";
+    color: gray;
+  }
+  
+  .NotFound button {
+    background-color: blueviolet;
+    border: 0;
+    width: 130px;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .button {
+    align-self: flex-end;
+    width: 400px;
+    height: 300px;
+    transition: 200ms;
+  }
+  
+  .button button:hover {
+    scale: (0.9);
+    box-shadow: 0px 2px 15px blueviolet;
+  }

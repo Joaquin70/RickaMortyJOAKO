@@ -4,8 +4,8 @@ import axios from "axios";
 
 import Cards from "./components/cards/Cards.jsx";
 import Nav from "./components/nav/Nav.jsx"
-import Detail from "./views/Detail.jsx";
-import ErrorPage from "./views/ErrorPage.jsx";
+import Detail from "./views/detail/Detail.jsx";
+import NotFound from "./views/error/NotFound.jsx";
 import Login from "./views/login/Login.jsx";
 import Favorites from "./views/favorites/Favorites.jsx";
 import About from "./views/about/About.jsx";
@@ -41,6 +41,8 @@ function App() {
    //eslint-disable-next-line
  }, [access]);
 
+
+
    function searchHandler(id) {
       axios(`https://rickandmortyapi.com/api/character/${id}`).then(({ data }) => {
          if (data.name) {
@@ -59,6 +61,7 @@ function App() {
   
       setCharacters(filteredCharacters);
     }
+
   //  function randomHandler() {
     //  let memoria = [];
   
@@ -87,19 +90,22 @@ function App() {
         onSearch={searchHandler}
        // randomize={randomHandler}
         //logout={logoutHandler}
+       
       />
     )}
   
     <Routes>
-      <Route path="/" element={<Login login={loginHandler} />} />
+      <Route path="/"   element={<Login login={loginHandler} />} />   
       <Route
         path="/home"
         element={<Cards characters={characters} onClose={closeHandler} />}
+    
+        
       />
       <Route path="/about" element={<About />} />
       <Route path="/favorites" element={<Favorites />} />
       <Route path="/detail/:id" element={<Detail />} />
-      <Route path="*" element={<ErrorPage />} />
+      <Route path="*" element={<NotFound />} />
     </Routes>
   </div>
 );
